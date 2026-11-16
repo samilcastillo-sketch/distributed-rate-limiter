@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  rate-limiter-gateway:
+    build: .
+    container_name: api-rate-limiter
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - HOST=0.0.0.0
